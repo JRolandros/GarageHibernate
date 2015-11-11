@@ -6,11 +6,11 @@ package fr.esigelec.garage;
  */
 
 public class Voiture {
-	private int id;
-	private String immatriculation;
-	private String modele;
-	private int anneeConstruction;
-	private int km;
+	private int id; //id used to store the geneted id
+	private String immatriculation; //immatriculation
+	private String modele; // car model
+	private int anneeConstruction; //construction year
+	private int km; //kilometers
 	
 	public Voiture(){
 		this.km=0;
