@@ -22,6 +22,7 @@ public class Voiture {
 				+ "\nanneeConstruction=" + anneeConstruction + "\nkm=" + km + "\ngetClass()=" + getClass();
 	}
 	
+	
 	/**
 	 * @param id
 	 * @param immatriculation
@@ -31,12 +32,12 @@ public class Voiture {
 	 */
 	public Voiture(int id, String immatriculation, String modele, int anneeConstruction, int km) {
 		super();
-		this.id = id;
 		this.immatriculation = immatriculation;
 		this.modele = modele;
 		this.anneeConstruction = anneeConstruction;
 		this.km = km;
 	}
+
 	
 	//Getters and setters
 	/**
@@ -61,6 +62,7 @@ public class Voiture {
 	 * @param immatriculation the immatriculation to set
 	 */
 	public void setImmatriculation(String immatriculation) {
+		//TODO mettre les expression de controle du format du matricule
 		this.immatriculation = immatriculation;
 	}
 	/**
@@ -85,6 +87,7 @@ public class Voiture {
 	 * @param anneeConstruction the anneeConstruction to set
 	 */
 	public void setAnneeConstruction(int anneeConstruction) {
+		//TODO vérifier l'année
 		this.anneeConstruction = anneeConstruction;
 	}
 	/**
@@ -97,7 +100,10 @@ public class Voiture {
 	 * @param km the km to set
 	 */
 	public void setKm(int km) {
-		this.km += km;
+		if(km>=0)
+			this.km += km;
+		else
+			System.out.println("Le km doit etre positif!");
 	}
 
 	public static void main(String arg[]){

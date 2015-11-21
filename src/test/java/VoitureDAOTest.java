@@ -55,9 +55,11 @@ public class VoitureDAOTest {
 	 */
 	@Test
 	public void testAjouter() {
-		Voiture v=new Voiture(10,"PQ-835-SD","PEUGEOT",2012,15);
-		
-		//vdao.ajouter(v);
+		System.out.println("\n Test VoitureDAO.Ajouter() ");
+		System.out.println("====================\n");
+		Voiture v=new Voiture(0,"PQ-835-AK","PEUGEOT Test",2015,15);
+		vdao.ajouter(v);
+		System.out.println(v.getId());
 
 	}
 
@@ -66,7 +68,10 @@ public class VoitureDAOTest {
 	 */
 	@Test
 	public void testSupprimer() {
-		Voiture v=new Voiture(4,"SG-456-AF","KIA",1986,52);
+		System.out.println("\n Test VoitureDAO.Supprimer() ");
+		System.out.println("====================\n");
+		Voiture v=new Voiture(0,"PQ-835-AK","PEUGEOT",2015,15);
+		vdao.ajouter(v);
 		vdao.supprimer(v);
 
 	}
@@ -76,6 +81,11 @@ public class VoitureDAOTest {
 	 */
 	@Test
 	public void testRouler() {
+		System.out.println("\n Test VoitureDAO.Rouler() ");
+		System.out.println("====================\n");
+		Voiture v=new Voiture(0,"PQ-835-AK","PEUGEOT Test",2015,15);
+		vdao.rouler(v, 10);
+		System.out.println("Km= "+v.getKm());
 	}
 
 	/**
@@ -83,8 +93,10 @@ public class VoitureDAOTest {
 	 */
 	@Test
 	public void testGetVoiture() {
-		//Voiture v1=vdao.getVoiture(10);
-		//System.out.println(v1.toString()); 
+		System.out.println("\n Test VoitureDAO.GetVoiture() ");
+		System.out.println("====================\n");
+		Voiture v1=vdao.getVoiture(10);
+		System.out.println(v1.toString()); 
 	}
 
 	/**
@@ -92,12 +104,12 @@ public class VoitureDAOTest {
 	 */
 	@Test
 	public void testGetVoitures() {
-		
+		System.out.println("\n Test VoitureDAO.GetVoitures()");
+		System.out.println("====================\n");
 		List<Voiture> listV=vdao.getVoitures();
 		for (Voiture v : listV) {
 			System.out.println(v.toString());
-		}
-				
+		}				
 	}
 
 }
